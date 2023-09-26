@@ -3,7 +3,7 @@ import OpenAI from "openai";
 export default async function takeAShot({ systemPrompt, userPrompt, model, logInputs = false }) {
 
   // Use Replicate OpenAI proxy server for non-OpenAI models like Llama 2
-  const clientOptions = model.startsWith("replicate/")
+  const clientOptions = model && model.startsWith("replicate/")
     ? {
         apiKey: process.env["REPLICATE_API_TOKEN"],
         baseURL: "https://replicate-openai-proxy.fly.dev/v1",
