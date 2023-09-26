@@ -2,6 +2,8 @@
 
 Use language models to write single-page apps with one shot.
 
+This is a command-line interface (CLI) that lets you send a text prompt to ChatGPT or Llama 2 and get back an HTML string that you can save to disk as a webpage.
+
 ## Installation
 
 Install the npm package globally to add a binary named `swish` to your PATH:
