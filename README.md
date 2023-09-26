@@ -6,16 +6,10 @@ This is a command-line interface (CLI) that lets you send a text prompt to ChatG
 
 ## Installation
 
-Install the npm package globally to add a binary named `swish` to your PATH:
+It's a Node.js package but it's not on npm yet. Run it directly from GitHub using npx:
 
 ```
-npm i -g @zeke/swish
-```
-
-Or just use npx (the slower, non-committal option):
-
-```
-npx @zeke/swish
+npx zeke/swish
 ```
 
 ## Usage
@@ -23,28 +17,28 @@ npx @zeke/swish
 Set up access to your language models:
 
 ```
-$ export OPENAI_API_KEY=sk-...
-$ export REPLICATE_API_TOKEN=r8_...
+export OPENAI_API_KEY=sk-...
+export REPLICATE_API_TOKEN=r8_...
 ```
 
 Write a prompt and get back HTML as standard output:
 
 ```console
-$ swish "make a colorful page"
+npx zeke/swish "make a colorful page"
 <html>...</html>
 ```
 
 Write a prompt, save the HTML to disk, and open it in your browser:
 
 ```console
-$ swish "make a colorful page sprinkled with confetti" > index.html && open index.html
+npx zeke/swish "make a colorful page sprinkled with confetti" > index.html && open index.html
 ```
 
 Want to write a longer prompt and iterate on it? Put it in a file:
 
 ```console
-$ echo "some long description..." > prompt.md
-$ swish prompt.md > index.html && open index.html
+echo "some long description..." > prompt.md
+npx zeke/swish prompt.md > index.html && open index.html
 ```
 
 Want to use a different model? Use the `--model` option:
