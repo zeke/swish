@@ -1,0 +1,15 @@
+{
+  "name": "@zeke/swish",
+  "version": "1.0.0",
+  "description": "Use language models to write single-page apps with one shot.",
+  "repository": "https://github.com/zeke/swish",
+  "main": "index.js",
+  "bin": {
+    "swish": "cli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "openai": "^4.10.0"
+  }
+}
